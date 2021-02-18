@@ -66,7 +66,7 @@ export default function Post({ article }) {
                         <button className="snipcart-add-item bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
                          data-item-id={article.id}
                          data-item-price={129}
-                         data-item-url="/"
+                         data-item-url={`/articles/${article.id}`}
                          data-item-description={`High-quality sticker of ${article.name}.`}
                          data-item-image={article.image}
                          data-item-name={article.name}
