@@ -12,6 +12,9 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
+      <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
+
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -53,8 +56,7 @@ export default function Layout({ children, home }) {
       </header>
       <main className={styles.mainContent}>{children}</main>
       <footer>
-        <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
-        <div hidden id="snipcart" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4"></div>
+      <div id="snipcart" data-config-modal-style="side" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4" hidden></div>
       </footer>
 
     </div>

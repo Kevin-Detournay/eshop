@@ -21,14 +21,9 @@ export async function getStaticProps() {
 export default function Home({articles}) {
 
   return (
-    <Layout home>
+   <>
     <Head>
     <title>{siteTitle}</title>
-    <link rel="preconnect" href="https://app.snipcart.com"/>
-      <link rel="preconnect" href="https://cdn.snipcart.com"/>
-      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
-      
-
     </Head>
   
     
@@ -50,7 +45,7 @@ export default function Home({articles}) {
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
     
     </section>
+  </>
   
-    </Layout>
     )
   }
