@@ -1,9 +1,7 @@
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import Head from 'next/head'
 import axios from 'axios'
-import styles from './article.module.scss'
 
-import utilStyles from '../../styles/utils.module.css'
 
 
 export async function getStaticProps({params}) {
