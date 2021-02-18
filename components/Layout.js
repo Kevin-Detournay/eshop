@@ -5,15 +5,14 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import NavBar from './NavBar/index.js'
 
-const name = 'ARTISTE PEINTRE'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'e-shop'
+export const siteTitle = 'eshop'
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
-      <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
+    
 
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -35,16 +34,24 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              src="/images/profile.png"
+              className=""
+              height={280}
+              width={280}
               alt={name}
             />
             <h1 className={utilStyles.headingXl}>{name}</h1>
           </>
         ) : (
-          <>       
+          <>   
+          <Image
+          priority
+          src="/images/profile.png"
+          className=""
+          height={144}
+          width={144}
+          alt={name}
+        />     
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
@@ -55,9 +62,7 @@ export default function Layout({ children, home }) {
         <NavBar/>
       </header>
       <main className={styles.mainContent}>{children}</main>
-      <footer>
-      <div id="snipcart" data-config-modal-style="side" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4" hidden></div>
-      </footer>
+      
 
     </div>
   )

@@ -1,6 +1,6 @@
 import '../styles/global.css'
-import Layout from '../components/Layout'
+import Snipcart from '../components/Snipcart'
 export default function App({ Component, pageProps }) {
-    return <Layout><Component {...pageProps} /></Layout>
+    return <Snipcart><Component {...pageProps} /></Snipcart>
      
   }

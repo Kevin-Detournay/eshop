@@ -6,8 +6,8 @@ import Link from 'next/link'
 import Card from '../components/Card'
 
 export async function getStaticProps() {
-    const response = await axios.get('https://rickandmortyapi.com/api/character/')
-  const articles= response.data.results
+    const response = await axios.get('https://fakestoreapi.com/products/')
+  const articles= response.data
   
   return {
     props: {
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 export default function Home({articles}) {
 
   return (
-   <>
+   <Layout home>
     <Head>
     <title>{siteTitle}</title>
     </Head>
@@ -45,7 +45,7 @@ export default function Home({articles}) {
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
     
     </section>
-  </>
+  </Layout>
   
     )
   }
