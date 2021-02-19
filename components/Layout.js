@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import LoginForm from './LogingForm'
 import Image from 'next/image'
-import utilStyles from '../styles/utils.module.css'
+
 import Link from 'next/link'
 import NavBar from './NavBar/index.js'
 
@@ -12,6 +12,7 @@ export default function Layout({ children}) {
   <>
     <Head>
     <link rel="icon" href="/favicon.ico" />
+    <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -28,26 +29,26 @@ export default function Layout({ children}) {
     
     <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
     </Head>
-      <header className="text-center">
-      
-        <Image
-        src="/images/profile.png"
-        alt="main logo"
-        width={200}
-        height={200}
-        />
-        
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{siteTitle}</a>
-              </Link>
-            </h2>
+      <header className="z-20 p-3 flex justify-between items-center bg-indigo-900 bg-opacity-75 fixed left-0 right-0 ">
+        <h2 className="">
+          <Link href="/">
+            <a> 
+              <Image
+                src="/images/profile.png"
+                alt="main logo"
+                width={50}
+                height={50}
+                />
+            </a>
+          </Link>
+        </h2>
         
        
-        <NavBar/>
+        <NavBar />
+        
       </header>
     
-    <main>
+    <main >
         {children}
     </main>
     <div id="snipcart" data-config-modal-style="side" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4" data-currency="eur" hidden>

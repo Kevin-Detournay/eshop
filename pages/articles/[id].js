@@ -41,9 +41,9 @@ export default function Article({ article }) {
      
     </Head>
    
-<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
-<div className="min-w-screen min-h-screen bg-gray-700 flex items-center p-5 lg:p-10 overflow-hidden relative">
-    <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+
+<div className="min-w-screen min-h-screen  bg-indigo-900 flex items-center text-center p-5 lg:p-10 overflow-hidden relative">
+    <div className="w-full max-w-6xl rounded mt-10 bg-white shadow-xl p-10 lg:p-20 mx-auto text-indigo-800 relative md:text-left">
         <div className="md:flex items-center -mx-10">
             <div className="w-full md:w-1/2 px-10 mb-10 md:mb-0">
                 <div className="relative">
@@ -63,7 +63,7 @@ export default function Article({ article }) {
 
                     </div>
                     <div className="inline-block align-bottom">
-                        <button className="snipcart-add-item bg-gray-500 opacity-75 hover:opacity-100 text-gray-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+                        <button className="snipcart-add-item bg-indigo-500 opacity-75 hover:opacity-100 text-indigo-900 hover:text-indigo-900 rounded-full px-10 py-2 font-semibold"
                          data-item-id={article.id}
                          data-item-price={article.price}
                          data-item-url={`/articles/${article.id}`}
