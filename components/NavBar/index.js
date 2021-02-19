@@ -6,11 +6,15 @@ import styles from './navBar.module.scss'
 
 
 
-const Navbar=()=>{
+const Navbar=({openMenu})=>{
  
 
     return(
-    <nav className="flex flex-col md:flex-row text-white text-center">
+    <nav className={
+        openMenu 
+       ? "h-auto flex flex-col md:flex-row text-white text-center "
+       :"hidden md:h-auto md:flex text-white text-center"
+       }>
     <Link href="/" ><a className={styles.navBar__link}>Acceuil</a></Link>
     <Link href="/categories" ><a className={styles.navBar__link}>Categories</a></Link>
     

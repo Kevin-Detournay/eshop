@@ -29,7 +29,7 @@ export default function Home({articles}) {
     </Head>
   
     
-    <section className="flex justify-center flex-wrap items-end justify-between p-10" >
+    <section className="flex justify-center flex-wrap items-end justify-between md:p-10" >
     
     {articles.map((article)=>(
         <Link key={article.id} href={`/articles/${article.id}`}>
