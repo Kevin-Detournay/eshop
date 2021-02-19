@@ -23,7 +23,7 @@ export async function getStaticProps() {
 export default function Home({articles}) {
 
   return (
-   <Layout home>
+   <>
     <Head>
     <title>{siteTitle}</title>
     </Head>
@@ -46,7 +46,7 @@ export default function Home({articles}) {
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
     
     </section>
-  </Layout>
+  </>
   
     )
   }

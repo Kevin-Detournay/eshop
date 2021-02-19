@@ -6,7 +6,7 @@ import utilStyles from '../styles/utils.module.css'
 
 export default function about() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -16,6 +16,6 @@ export default function about() {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         
       </section>
-    </Layout>
+    </>
   )
 }

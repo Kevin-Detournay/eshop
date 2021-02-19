@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 
 export default function Article({ article }) {
   return (
-   <Layout>
+   <>
     <Head>
       <title>{article.name}</title>
      
@@ -84,6 +84,6 @@ export default function Article({ article }) {
 </div>
 
 
- </Layout>
+ </>
 )
 }

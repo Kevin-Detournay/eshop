@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
 export default function Post({ articles }) {
   return (
-   <Layout>
+   <>
     <Head>
       <title>{siteTitle}</title>
      
@@ -62,6 +62,6 @@ export default function Post({ articles }) {
     </section>
 
 
- </Layout>
+ </>
 )
 }

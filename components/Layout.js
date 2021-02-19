@@ -1,20 +1,17 @@
 import Head from 'next/head'
+import LoginForm from './LogingForm'
 import Image from 'next/image'
-import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import NavBar from './NavBar/index.js'
 
-const name = 'e-shop'
-export const siteTitle = 'eshop'
+ export const siteTitle= "eshop"
 
-export default function Layout({ children, home,categories }) {
+export default function Layout({ children}) {
   return (
-    <div className={styles.container}>
-      <Head>
-    
-
-        <link rel="icon" href="/favicon.ico" />
+  <>
+    <Head>
+    <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -27,43 +24,45 @@ export default function Layout({ children, home,categories }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <header className={styles.header}>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
+    
+    <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
+    </Head>
+      <header className="text-center">
+      
+        <Image
+        src="/images/profile.png"
+        alt="main logo"
+        width={200}
+        height={200}
+        />
         
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.png"
-              className=""
-              height={280}
-              width={280}
-              alt={name}
-            />
-            <h1 className={utilStyles.headingXl}>{name}</h1>
-          </>
-        ) : (
-          <>   
-          <Image
-          priority
-          src="/images/profile.png"
-          className=""
-          height={144}
-          width={144}
-          alt={name}
-        />     
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className={utilStyles.colorInherit}>{siteTitle}</a>
               </Link>
             </h2>
-          </>
-        )}
-        <NavBar categories={categories}/>
+        
+       
+        <NavBar/>
       </header>
-      <main className={styles.mainContent}>{children}</main>
-      
+    
+    <main>
+        {children}
+    </main>
+    <div id="snipcart" data-config-modal-style="side" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4" data-currency="eur" hidden>
 
     </div>
+   
+    </>
   )
 }
+
+
+
+
+
+
+
+
+

@@ -39,7 +39,7 @@ export async function getStaticProps() {
 export default function Categories({newCat}) {
 
   return (
-   <Layout>
+   <>
     <Head>
     <title>{siteTitle}</title>
     </Head>
@@ -77,7 +77,7 @@ export default function Categories({newCat}) {
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
     
     </section>
-  </Layout>
+  </>
   
     )
   }

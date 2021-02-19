@@ -1,11 +1,11 @@
 import '../styles/global.css'
-import Snipcart from '../components/Snipcart'
+import Layout from '../components/Layout'
 
 
 export default function App({ Component, pageProps }) {
   
 
-    return <Snipcart><Component {...pageProps} /></Snipcart>
+    return <Layout><Component {...pageProps} /></Layout>
      
   }
 
