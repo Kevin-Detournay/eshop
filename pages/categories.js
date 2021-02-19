@@ -37,9 +37,9 @@ export async function getStaticProps() {
 
 
 export default function Categories({newCat}) {
-console.log(newCat)
+
   return (
-   <Layout >
+   <Layout>
     <Head>
     <title>{siteTitle}</title>
     </Head>
@@ -50,12 +50,22 @@ console.log(newCat)
     {newCat.map((category)=>(
         <Link key={category.categorie} href={`/categories/${category.categorie}`}>
          <a className='flex flex-col flex-wrap mx-auto p-1'>
-           
-           <h1 className='mb-2 text-center'>{category.categorie}</h1>
-           <div className='w-40' 
-           >
-             <img src={category.image} alt=""/></div>
-        
+         <div className="flex flex-col justify-end max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
+  
+  <div className="px-4 py-2">
+    <h1 className="text-gray-900 font-bold text-center text-2xl uppercase">{category.categorie}</h1>
+   
+  </div> 
+  
+  <img className="h-56 justify-self-end w-full object-contain mt-2" src={category.image} alt=""/>
+  
+  <div className="flex items-center justify-center px-4 py-2 bg-gray-900">
+
+    <button className="px-3 py-1 bg-gray-200  text-sm text-gray-900 font-semibold rounded "
+    >Voir la categorie </button>
+  </div>
+</div>
+
          </a>
         </Link>
          

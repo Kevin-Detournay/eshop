@@ -5,14 +5,16 @@ import axios from 'axios'
 import Link from 'next/link'
 import Card from '../components/Card'
 
+
 export async function getStaticProps() {
     const response = await axios.get('https://fakestoreapi.com/products/')
   const articles= response.data
-  
+  const responseCat = await axios.get('https://fakestoreapi.com/products/categories')
+    const categories= responseCat.data
   return {
     props: {
       articles,
-     
+        
     }
   }
 }
@@ -27,7 +29,7 @@ export default function Home({articles}) {
     </Head>
   
     
-    <section className="flex flex-wrap justify-between p-10" >
+    <section className="flex flex-wrap items-end justify-between p-10" >
     
     {articles.map((article)=>(
         <Link key={article.id} href={`/articles/${article.id}`}>

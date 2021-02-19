@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 
 
 
-export default function Home() {
+export default function about() {
   return (
     <Layout>
       <Head>

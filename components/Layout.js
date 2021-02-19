@@ -8,7 +8,7 @@ import NavBar from './NavBar/index.js'
 const name = 'e-shop'
 export const siteTitle = 'eshop'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home,categories }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -59,7 +59,7 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
-        <NavBar/>
+        <NavBar categories={categories}/>
       </header>
       <main className={styles.mainContent}>{children}</main>
       

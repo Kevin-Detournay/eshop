@@ -5,8 +5,8 @@ export default function Card({article}){
    <div className="flex flex-col justify-end max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
   
   <div className="px-4 py-2">
-    <h1 className="text-gray-900 font-bold text-3xl uppercase">{article.title}</h1>
-    <p className="text-gray-600 text-sm mt-1">{article.description}</p>
+    <h1 className="text-gray-900 font-bold text-2xl uppercase">{article.title}</h1>
+    <p className="text-gray-600 text-sm mt-1">{article.description.split(' ').slice(0,30).join(' ')+" ..."}</p>
   </div> 
   
   <img className="h-56 justify-self-end w-full object-contain mt-2" src={article.image} alt=""/>

@@ -20,13 +20,13 @@ export async function getStaticProps({params}) {
 }
 
 export async function getStaticPaths() {
-  const response = await axios.get('https://rickandmortyapi.com/api/character/')
-  const posts= response.data.results
+  const response = await axios.get('https://fakestoreapi.com/products/')
+  const articles= response.data
  
   
   return {
-    paths:posts.map(post=>({
-      params:{id:post.id.toString()}
+    paths:articles.map(article=>({
+      params:{id:article.id.toString()}
     })),
     fallback: false
   }
@@ -54,7 +54,7 @@ export default function Post({ article }) {
             <div className="w-full md:w-1/2 px-10">
                 <div className="mb-10">
                     <h1 className="font-bold uppercase text-2xl mb-5">{article.name}</h1>
-                    <p className="text-sm"> {article.description} <a href="#" className="opacity-50 text-gray-900 hover:opacity-100 inline-block text-xs leading-none border-b border-gray-900">MORE <i className="mdi mdi-arrow-right"></i></a></p>
+                    <p className="text-sm"> {article.description}</p>
                 </div>
                 <div>
                     <div className="inline-block align-bottom mr-5">
@@ -67,7 +67,7 @@ export default function Post({ article }) {
                          data-item-id={article.id}
                          data-item-price={article.price}
                          data-item-url={`/articles/${article.id}`}
-                         data-item-description={`High-quality sticker of ${article.title}.`}
+                         data-item-description={article.description}
                          data-item-image={article.image}
                          data-item-name={article.title}
                         ><i className="mdi mdi-cart -ml-2 mr-2"
