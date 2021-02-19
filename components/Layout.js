@@ -29,7 +29,7 @@ export default function Layout({ children}) {
     
     <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
     </Head>
-      <header className="z-20 p-3 flex justify-between items-center bg-indigo-900 bg-opacity-75 fixed left-0 right-0 ">
+      <header className="z-20 p-3 flex flex-col md:flex-row justify-between items-center bg-indigo-900 bg-opacity-75 fixed left-0 right-0 ">
         <h2 className="">
           <Link href="/">
             <a> 
@@ -43,12 +43,11 @@ export default function Layout({ children}) {
           </Link>
         </h2>
         
-       
         <NavBar />
         
       </header>
     
-    <main >
+    <main className="flex justify-center" >
         {children}
     </main>
     <div id="snipcart" data-config-modal-style="side" data-api-key="NTZiZjlkNjEtMGQ5Yi00ZmU0LThiYWMtNDIxZTEzZWMwNDFmNjM3NDkxODUyMjE4MzE4ODU4" data-currency="eur" hidden>
