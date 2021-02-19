@@ -31,7 +31,7 @@ export default function Home({articles}) {
     
     {articles.map((article)=>(
         <Link key={article.id} href={`/articles/${article.id}`}>
-         <a>
+         <a className="mx-auto">
            <Card  article={article} />
          </a>
         </Link>
