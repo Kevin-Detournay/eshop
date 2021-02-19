@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 
-export default function Post({ article }) {
+export default function Article({ article }) {
   return (
    <Layout>
     <Head>
