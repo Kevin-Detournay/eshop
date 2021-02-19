@@ -22,7 +22,7 @@ const Navbar=()=>{
     <Link href="/" ><a className={styles.navBar__link}>Acceuil</a></Link>
     <Link href="/categories" ><a className={styles.navBar__link}>Categories</a></Link>
     <Link href="/about"><a className={styles.navBar__link}>A Propos</a></Link>
-    
+    <p>{categories}</p>
     </nav>
     )
 }
