@@ -54,7 +54,7 @@ export default function Categories({ newCat }) {
 
                   <img className="h-56 justify-self-end w-full object-contain mt-2" src={category.image} alt="" />
 
-                  <div className="flex items-center justify-center px-4 py-2 bg-indigo-900">
+                  <div className="flex items-center justify-center px-4 py-2 bg-green-900">
 
                     <button className=" px-3 py-1 bg-gray-200  text-sm text-gray-900 font-semibold rounded ">Voir la categorie
                     </button>

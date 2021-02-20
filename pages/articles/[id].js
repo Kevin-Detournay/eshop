@@ -33,8 +33,8 @@ export default function Article({ article }) {
         <title>{article.title}</title>
       </Head>
 
-      <div className="bg-indigo-900 w-full flex items-center text-center p-5 lg:p-10 overflow-hidden relative">
-        <div className="w-full max-w-6xl rounded mt-10 bg-white shadow-xl p-10 lg:p-20 mx-auto text-indigo-800 relative md:text-left">
+      <div className="bg-green-900 w-full flex items-center text-center p-5 lg:p-10 overflow-hidden relative">
+        <div className="w-full max-w-6xl rounded mt-10 bg-white shadow-xl p-10 lg:p-20 mx-auto text-green-800 relative md:text-left">
           <div className="md:flex items-center -mx-10">
             <div className="w-full md:w-1/2 px-10 mb-10 md:mb-0">
               <div className="relative">
@@ -55,7 +55,7 @@ export default function Article({ article }) {
                 </div>
                 <div className="flex flex-col ">
                   <button
-                    className="snipcart-add-item bg-indigo-500 opacity-75 hover:opacity-100 text-indigo-900 hover:text-indigo-900 rounded-full px-10 py-2 font-semibold"
+                    className="snipcart-add-item bg-green-500 opacity-75 hover:opacity-100 text-green-900 hover:text-green-900 rounded-full px-10 py-2 font-semibold"
                     data-item-id={article.id}
                     data-item-price={article.price}
                     data-item-url={`/articles/${article.id}`}
@@ -64,7 +64,7 @@ export default function Article({ article }) {
                     data-item-name={article.title}
                   ><i className="mdi mdi-cart -ml-2 mr-2" /> BUY NOW
                   </button>
-                  <Link href="/"><a className="p-5 mt-5 self-center uppercase hover:text-indigo-300">← retour a l'Accueil</a></Link>
+                  <Link href="/"><a className="p-5 mt-5 self-center uppercase hover:text-green-300">← retour a l'Accueil</a></Link>
 
                 </div>
               </div>

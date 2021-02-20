@@ -12,7 +12,7 @@ export default function Card({ article }) {
 
       <img className="h-56 justify-self-end w-full object-contain mt-2" src={article.image} alt="" />
 
-      <div className="flex items-center justify-end  px-4 py-2 bg-indigo-900">
+      <div className="flex items-center justify-end  px-4 py-2 bg-green-900">
         <h1 className="text-gray-200 font-bold  text-xl">{article.price} €</h1>
 
       </div>
