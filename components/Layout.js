@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
-import NavBar from './NavBar/index.js';
+import NavBar from './NavBar';
 
 export const siteTitle = 'eshop';
 
@@ -44,6 +45,7 @@ export default function Layout({ children, onClick, openMenu }) {
 
         <NavBar openMenu={openMenu} />
 
+        {/* eslint-disable-next-line react/button-has-type */}
         <button onClick={onClick} className="md:hidden inline-flex items-center justify-center w-8 h-8 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
           <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" fillRule="evenodd" /></svg>
         </button>
@@ -57,3 +59,9 @@ export default function Layout({ children, onClick, openMenu }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  openMenu: PropTypes.bool.isRequired,
+  children: PropTypes.any.isRequired,
+  onClick: PropTypes.func.isRequired,
+};

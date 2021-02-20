@@ -1,6 +1,8 @@
+/* eslint-disable react/button-has-type */
 import Head from 'next/head';
 import axios from 'axios';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export async function getStaticProps({ params }) {
   const response = await axios.get(`https://fakestoreapi.com/products/${params.id}`);
@@ -28,7 +30,7 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        <title>{article.name}</title>
+        <title>{article.title}</title>
       </Head>
 
       <div className="bg-indigo-900 w-full flex items-center text-center p-5 lg:p-10 overflow-hidden relative">
@@ -42,7 +44,7 @@ export default function Article({ article }) {
             </div>
             <div className="w-full md:w-1/2 px-10">
               <div className="mb-10">
-                <h1 className="font-bold uppercase text-2xl mb-5">{article.name}</h1>
+                <h1 className="font-bold uppercase text-2xl mb-5">{article.title}</h1>
                 <p className="text-sm"> {article.description}</p>
               </div>
               <div>
@@ -74,3 +76,14 @@ export default function Article({ article }) {
     </>
   );
 }
+
+Article.propTypes = {
+  article: PropTypes.shape({
+    id: PropTypes.number,
+    image: PropTypes.string,
+    description: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
+
+};
