@@ -45,26 +45,29 @@ export default function Categories({newCat}) {
     </Head>
   
     
-    <section className="flex flex-wrap justify-between p-10" >
+    <section className="flex flex-wrap justify-between " >
     
     {newCat.map((category)=>(
         <Link key={category.categorie} href={`/categories/${category.categorie}`}>
-         <a className='transition duration-500 ease-in-out transform hover:scale-101 transform hover:opacity-50 flex flex-col flex-wrap mx-auto p-1'>
-         <div className=" flex flex-col justify-end max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
-  
-  <div className="px-4 py-2">
-    <h1 className="text-gray-900 font-bold text-center text-2xl uppercase">{category.categorie}</h1>
-   
-  </div> 
-  
-  <img className="h-56 justify-self-end w-full object-contain mt-2" src={category.image} alt=""/>
-  
-  <div className="flex items-center justify-center px-4 py-2 bg-indigo-900">
-
-    <button className=" px-3 py-1 bg-gray-200  text-sm text-gray-900 font-semibold rounded "
-    >Voir la categorie </button>
-  </div>
-</div>
+         <a className='mx-auto'>
+         <div className="transition duration-500 ease-in-out transform hover:scale-101 transform hover:opacity-50 flex flex-col flex-wrap mx-auto p-1">
+           
+           <div className=" flex flex-col justify-end max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
+           
+             <div className="px-4 py-2">
+               <h1 className="text-gray-900 font-bold text-center text-2xl uppercase">{category.categorie}</h1>
+              
+             </div> 
+             
+             <img className="h-56 justify-self-end w-full object-contain mt-2" src={category.image} alt=""/>
+             
+             <div className="flex items-center justify-center px-4 py-2 bg-indigo-900">
+           
+               <button className=" px-3 py-1 bg-gray-200  text-sm text-gray-900 font-semibold rounded "
+               >Voir la categorie </button>
+             </div>
+           </div>
+         </div>
 
          </a>
         </Link>
