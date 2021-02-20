@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import {siteTitle} from "../components/Layout"
 import utilStyles from '../styles/utils.module.css'
 import axios from 'axios'
 import Link from 'next/link'
