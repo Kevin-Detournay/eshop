@@ -15,7 +15,7 @@ export default function Layout({ children,onClick,openMenu}) {
     <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="mock-eshop projet perso "
         />
         <meta
           property="og:image"

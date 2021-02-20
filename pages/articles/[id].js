@@ -5,13 +5,8 @@ import Link from 'next/link'
 
 
 export async function getStaticProps({params}) {
-  
-  await console.log(params.id)
   const response = await axios.get(`https://fakestoreapi.com/products/${params.id}`)
-
   const article=response.data
-  
-
   return {
     props: {
      article
