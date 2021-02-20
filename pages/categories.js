@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/Layout'
+
 import utilStyles from '../styles/utils.module.css'
 import axios from 'axios'
 import Link from 'next/link'
-import Image from 'next/image'
+
 
 export async function getStaticProps() {
     const response = await axios.get('https://fakestoreapi.com/products/categories')
